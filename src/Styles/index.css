@@ -9,6 +9,23 @@
     font-family: 'montserrat', sans-serif;
 }
 
+.input-box span {
+    padding: 12px;
+}
+
+
+.input-box input:valid ~ span,
+ .input-box input:focus ~ span {
+    color: black;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    transform: translateX(10px) translateY(-10px);
+    font-size: 0.65em;
+    background: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
 /* .font-secondary {
   font-family: "Lexend Exa", sans-serif;
   font-optical-sizing: auto;
