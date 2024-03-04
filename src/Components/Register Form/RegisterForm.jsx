@@ -124,7 +124,7 @@ const RegisterForm = () => {
 
     return (
         <>
-            <div className='mx-4 my-10'>
+            <div className='mx-4 my-10 min-'>
                 <div className='flex flex-col-reverse lg:flex-row-reverse lg:items-center gap-7 lg:gap-0 w-full'>
                     <div className='lg:flex-1'>
                         <div className='py-8 px-6 shadow-xl w-full md:w-8/12 mx-auto bg-base-100 rounded-md space-y-8 '>
@@ -181,7 +181,7 @@ const RegisterForm = () => {
                         </div>
                     </div>
                     <div className='lg:flex-1'>
-                        <img className='w-full md:w-10/12 mx-auto' src="https://i.ibb.co/qx0x0gd/ezgif-2-c138207f2b.gif" alt="" />
+                        <img className='w-full md:w-10/12 mx-auto' src="https://i.ibb.co/51h04cj/ezgif-7-6a69fdc182.gif" alt="" />
                     </div>
                 </div>
             </div>

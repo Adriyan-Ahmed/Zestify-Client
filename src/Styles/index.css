@@ -32,13 +32,29 @@
 } */
 
 @keyframes test {
-    100%{
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anima2 {
+  25% {
+    transform: translateY(-5px) scale(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-5px) scale(1.1) rotate(5deg);
+  }
+  0% {
+    transform: translateY(0) scale(1) rotate(0);
+  }
 }
 
 .rotate-image {
-    display: block;
-  animation: test 6s linear infinite ;
+  display: block;
+  animation: test 6s linear infinite;
+}
 
+.bounce-image {
+  display: block;
+  animation: anima2 3s ease-in-out infinite;
 }
