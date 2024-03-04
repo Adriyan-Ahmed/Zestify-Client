@@ -3,7 +3,7 @@ import RegisterForm from "../../Components/Register Form/RegisterForm";
 const Register = () => {
     return (
         <>
-            <section>
+            <section className="container mx-auto">
                 <RegisterForm></RegisterForm>
             </section>
         </>

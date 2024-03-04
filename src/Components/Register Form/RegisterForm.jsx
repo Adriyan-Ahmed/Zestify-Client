@@ -125,7 +125,7 @@ const RegisterForm = () => {
     return (
         <>
             <div className='mx-4 my-10'>
-                <div className='flex flex-col-reverse lg:flex-row lg:items-center gap-7 lg:gap-0 w-full'>
+                <div className='flex flex-col-reverse lg:flex-row-reverse lg:items-center gap-7 lg:gap-0 w-full'>
                     <div className='lg:flex-1'>
                         <div className='py-8 px-6 shadow-xl w-full md:w-8/12 mx-auto bg-base-100 rounded-md space-y-8 '>
                             <div className='space-y-2'>

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <>
-            <section className=" py-10 lg:py-20 bg-cover bg-no-repeat " style={{ backgroundImage: "url('https://i.ibb.co/wYnDMD1/Footers-bg.png')" }}>
-                <div className="container mx-auto px-4">
+            <section className=" bg-cover bg-no-repeat " style={{ backgroundImage: "url('https://i.ibb.co/wYnDMD1/Footers-bg.png')" }}>
+                <div className="container mx-auto px-4  md:py-28 lg:py-20">
                     <div className="flex flex-col xl:flex-row gap-6">
                         <div className="flex flex-col lg:flex-row gap-4 w-full">
                             <div className="text-white space-y-5">
@@ -84,7 +84,19 @@ const Footer = () => {
                         <div></div>
                     </div>
                 </div>
-            </section>
+                <div className="py-6 border-t border-slate-500">
+                    <div className="container mx-auto px-4">
+                        <div className="flex flex-col md:flex-row items-center justify-between text-white ">
+                            <span>©2023 ReservQ. All rights reserved</span>
+                            <div className="text-sm font-semibold flex items-center justify-between md:justify-normal gap-2 ">
+                                <span>Terms of User</span>
+                                <span>License</span>
+                                <span>Support</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section >
         </>
     );
 };
