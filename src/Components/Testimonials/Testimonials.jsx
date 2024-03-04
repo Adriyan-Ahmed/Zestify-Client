@@ -21,6 +21,7 @@ const Testimonials = () => {
 
     const [swiperInitialized, setSwiperInitialized] = useState(false);
     const [swiper, setSwiper] = useState(null);
+    const [slidesPerView, setSlidesPerView] = useState(window.innerWidth < 768 ? 1 : 2);
 
 
     const handleNextButtonClick = () => {
@@ -46,6 +47,20 @@ const Testimonials = () => {
             swiper.update();
         }
     }, [swiper]);
+
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSlidesPerView(window.innerWidth < 768 ? 1 : 2);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
 
 
@@ -106,17 +121,17 @@ const Testimonials = () => {
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div className="text-left flex-1 space-y-3 lg:space-y-6">
                             <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold">REVIEWS ABOUT US</h1>
-                            <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-5 md:leading-7 lg:leading-8 md:w-2/4 lg:w-5/6 mx-auto md:ml-0">While mirth large of on front. Ye he greater related adapted proceed entered an.</p>
+                            <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-5 md:leading-7 lg:leading-8 md:w-2/4 lg:w-5/6 xl:w-2/3 mx-auto md:ml-0">While mirth large of on front. Ye he greater related adapted proceed entered an.</p>
                         </div>
                         <div className="flex-1 flex lg:flex-row justify-between items-center lg:justify-end gap-3  lg:gap-4">
                             <div className="flex gap-3">
-                                <button onClick={handlePrevButtonClick} className="px-8 hover:bg-[#F01543] focus:bg-[#F01543]  rounded hover:text-white focus:text-white font-bold hover:py-3.5 focus:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-3.5 bg-transparent duration-500 "><FaArrowLeft></FaArrowLeft></button>
-                                <button onClick={handleNextButtonClick} className="px-8 hover:bg-[#F01543] focus:bg-[#F01543]  rounded hover:text-white focus:text-white font-bold hover:py-3.5 focus:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-3.5 bg-transparent duration-500 "><FaArrowRight></FaArrowRight></button>
+                                <button onClick={handlePrevButtonClick} className="px-8 hover:bg-[#F01543] rounded hover:text-white font-bold hover:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-4 bg-transparent duration-500 "><FaArrowLeft></FaArrowLeft></button>
+                                <button onClick={handleNextButtonClick} className="px-8 hover:bg-[#F01543] rounded hover:text-white font-bold hover:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-4 bg-transparent duration-500 "><FaArrowRight></FaArrowRight></button>
                             </div>
-                            <button className="flex items-center gap-3 px-8 bg-[#F01543] rounded text-white font-bold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border-2 hover:text-[#F01543] focus:text-[#F01543] border-2 focus:py-3 focus:bg-transparent duration-500 "><FaRegComment></FaRegComment>ALL REVIEWS</button>
+                            <button className="flex items-center gap-3 px-8 bg-[#F01543] rounded text-white font-bold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border-2 hover:text-[#F01543] focus:text-[#F01543]  focus:py-3 focus:bg-transparent duration-500 "><FaRegComment></FaRegComment>ALL REVIEWS</button>
                         </div>
                     </div>
-                    <div className="md:hidden">
+                    {/* <div className="md:hidden">
                         <Swiper
                             direction="horizontal"
                             spaceBetween={13}
@@ -143,14 +158,14 @@ const Testimonials = () => {
                                 </div>
                             )}
                         </Swiper>
-                    </div>
-                    <div className="hidden md:flex">
+                    </div> */}
+                    <div className="">
                         <Swiper
                             direction="horizontal"
                             spaceBetween={13}
                             onSwiper={handleSwiperInit}
                             controller={{ control: swiper => (window.swiper = swiper) }}
-                            slidesPerView={2}
+                            slidesPerView={slidesPerView}
                         >
                             {swiperInitialized ? (
                                 cardsInfo.map((cardInfo) => (
