@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap') */
 
 @tailwind base;
@@ -6,24 +6,23 @@
 @tailwind utilities;
 
 .font-primary {
-    font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 
 .input-box span {
-    padding: 12px;
+  padding: 12px;
 }
 
-
 .input-box input:valid ~ span,
- .input-box input:focus ~ span {
-    color: black;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    transform: translateX(10px) translateY(-10px);
-    font-size: 0.65em;
-    background: white;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+.input-box input:focus ~ span {
+  color: black;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  transform: translateX(10px) translateY(-10px);
+  font-size: 0.65em;
+  background: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* .font-secondary {
@@ -31,3 +30,15 @@
   font-optical-sizing: auto;
   font-style: normal;
 } */
+
+@keyframes test {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-image {
+    display: block;
+  animation: test 6s linear infinite ;
+
+}
