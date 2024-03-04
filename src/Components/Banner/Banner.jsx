@@ -6,9 +6,9 @@ const Banner = () => {
                     <div className=" container mx-auto text-white " >
                         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-0 py-10 md:py-20">
                             <div data-aos="fade-right"
-                                data-aos-offset="100"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-sine" 
+                                 data-aos-offset="100"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine" 
                                 className="flex-1 text-center md:text-left mx-4">
                                 <div className=" xl:w-[600px] mx-auto ">
                                     <h5 className=" text-base md:text-lg lg:text-2xl font-semibold text-[#FFFF00] ">Gastronome Haven</h5>
