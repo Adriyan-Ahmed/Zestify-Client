@@ -130,3 +130,27 @@
   transition-delay: 0.4s;
   transition-timing-function: linear;
 }
+
+
+.category-item:hover #icon-container {
+  background-color: #D81440;
+}
+
+.category-item #icon-container {
+  background-color: white;
+}
+
+.category-item #hover-icon {
+  display: none;
+}
+.category-item:hover #hover-icon {
+  display: flex;
+}
+
+.category-item:hover #default-icon {
+  display: none;
+}
+
+.category-item:hover {
+  color: white;
+}
