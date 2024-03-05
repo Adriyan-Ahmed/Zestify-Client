@@ -119,11 +119,19 @@ const Testimonials = () => {
             <div className="container mx-auto">
                 <div className=" mx-4 space-y-9">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                        <div className="text-left flex-1 space-y-3 lg:space-y-6">
+                        <div data-aos="fade-right"
+                            data-aos-offset="100"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine" 
+                            className="text-left flex-1 space-y-3 lg:space-y-6">
                             <h1 className="text-2xl md:text-4xl font-bold text-[#F01543] ">REVIEWS ABOUT US</h1>
                             <p className="text-[12px] md:text-[16px] lg:text-[18px] leading-5 md:leading-7 lg:leading-8 md:w-2/4 lg:w-5/6 xl:w-2/3 mx-auto md:ml-0">While mirth large of on front. Ye he greater related adapted proceed entered an.</p>
                         </div>
-                        <div className="flex-1 flex lg:flex-row justify-between items-center lg:justify-end gap-3  lg:gap-4">
+                        <div data-aos="fade-left"
+                            data-aos-offset="100"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine" 
+                            className="flex-1 flex lg:flex-row justify-between items-center lg:justify-end gap-3  lg:gap-4">
                             <div className="flex gap-3">
                                 <button onClick={handlePrevButtonClick} className="px-8 hover:bg-[#F01543] rounded hover:text-white font-bold hover:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-4 bg-transparent duration-500 "><FaArrowLeft></FaArrowLeft></button>
                                 <button onClick={handleNextButtonClick} className="px-8 hover:bg-[#F01543] rounded hover:text-white font-bold hover:py-3.5 text-sm md:text-base lg:text-lg   border-[#F01543] text-[#F01543] border-2 py-4 bg-transparent duration-500 "><FaArrowRight></FaArrowRight></button>
@@ -159,7 +167,10 @@ const Testimonials = () => {
                             )}
                         </Swiper>
                     </div> */}
-                    <div className="">
+                    <div data-aos="fade-up"
+                        data-aos-offset="100"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-sine" >
                         <Swiper
                             direction="horizontal"
                             spaceBetween={13}
