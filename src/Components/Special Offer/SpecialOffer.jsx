@@ -9,10 +9,10 @@ const SpecialOffer = () => {
             <div className="container mx-auto">
                 <div className="mx-4 space-y-9">
                     <div data-aos="fade-right"
-                        data-aos-offset="100"
-                        data-aos-duration="1000"
-                        data-aos-easing="ease-in-sine" 
-                        className="text-center lg:text-left space-y-6 lg:ml-10 lg:pl-10 border-[#F01543] lg:border-l-8">
+                         data-aos-offset="100"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine" 
+                         className="text-center lg:text-left space-y-6 lg:ml-10 lg:pl-10 border-[#F01543] lg:border-l-8">
                         <h1 className="text-2xl md:text-4xl font-bold text-[#F01543] ">SPECIAL OFFERS</h1>
                         <p className="text-[14px] md:text-[16px] lg:text-[18px] leading-9 font-medium md:w-96 mx-auto lg:ml-0 ">We are providing you best food. Here are some Special Offers for you. We hope you will enjoy it.</p>
                     </div>
