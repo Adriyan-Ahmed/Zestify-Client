@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
+import OurCategories from "../../Components/Our Categories/OurCategories";
 import SpecialOffer from "../../Components/Special Offer/SpecialOffer";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 
@@ -13,6 +14,9 @@ const Home = () => {
             </section>
             <section>
                 <Testimonials></Testimonials>
+            </section>
+            <section>
+                <OurCategories></OurCategories>
             </section>
         </>
     );

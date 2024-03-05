@@ -120,8 +120,8 @@ const Testimonials = () => {
                 <div className=" mx-4 space-y-9">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div className="text-left flex-1 space-y-3 lg:space-y-6">
-                            <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold">REVIEWS ABOUT US</h1>
-                            <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-5 md:leading-7 lg:leading-8 md:w-2/4 lg:w-5/6 xl:w-2/3 mx-auto md:ml-0">While mirth large of on front. Ye he greater related adapted proceed entered an.</p>
+                            <h1 className="text-2xl md:text-4xl font-bold text-[#F01543] ">REVIEWS ABOUT US</h1>
+                            <p className="text-[12px] md:text-[16px] lg:text-[18px] leading-5 md:leading-7 lg:leading-8 md:w-2/4 lg:w-5/6 xl:w-2/3 mx-auto md:ml-0">While mirth large of on front. Ye he greater related adapted proceed entered an.</p>
                         </div>
                         <div className="flex-1 flex lg:flex-row justify-between items-center lg:justify-end gap-3  lg:gap-4">
                             <div className="flex gap-3">
