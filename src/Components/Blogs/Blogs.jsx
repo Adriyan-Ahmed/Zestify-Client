@@ -33,7 +33,7 @@ const Blogs = () => {
                                 blogs.map((blog, i) => <BlogCard key={i} blog={blog} ></BlogCard>)
                             }
                         </div>
-                        <div className="xl:flex-[2] space-y-8">
+                        <aside className="xl:flex-[2] space-y-8">
                             <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
                                 <h4 className="text-xl font-semibold">Search</h4>
                                 <div className="relative">
@@ -44,8 +44,18 @@ const Blogs = () => {
                                 </div>
                             </div>
 
-
-                        </div>
+                            <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
+                                <h4 className="text-xl font-semibold">Categories</h4>
+                                <div>
+                                    <ul className="grid grid-cols-1 md:grid-cols-2">
+                                        <li className="font-medium py-3 px-4 border-t hover:text-[#F01543] duration-300 flex items-center gap-2"><BiCategoryAlt></BiCategoryAlt><span>Exploration</span></li>
+                                        <li className="font-medium py-3 px-4 border-t hover:text-[#F01543] duration-300 flex items-center gap-2"><BiCategoryAlt></BiCategoryAlt><span>Recipes</span></li>
+                                        <li className="font-medium py-3 px-4 border-t hover:text-[#F01543] duration-300 border-b flex items-center gap-2"><BiCategoryAlt></BiCategoryAlt><span>Lifestyle</span></li>
+                                        <li className="font-medium py-3 px-4 border-t hover:text-[#F01543] duration-300 border-b flex items-center gap-2"><BiCategoryAlt></BiCategoryAlt><span>Health</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
