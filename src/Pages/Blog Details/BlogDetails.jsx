@@ -43,6 +43,15 @@ const BlogDetails = () => {
                             </div>
                             <aside className="xl:flex-[2] space-y-8">
                                 
+                                <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
+                                    <h4 className="text-xl font-semibold">Search</h4>
+                                    <div className="relative">
+                                        <input className="bg-white border p-5 w-full rounded-md outline-none " type="text" placeholder="What you Search?" required />
+                                        <span className="absolute top-2.5 right-2.5">
+                                            <button className=" text-[#F01543] p-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 "><IoIosSearch></IoIosSearch></button>
+                                        </span>
+                                    </div>
+                                </div>
 
                             </aside>
                         </div>
