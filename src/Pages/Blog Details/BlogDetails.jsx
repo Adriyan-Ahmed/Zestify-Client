@@ -14,14 +14,13 @@ import { IoPricetagsOutline } from "react-icons/io5";
 const BlogDetails = () => {
 
 
+    const [blog, setBlog] = useState({});
 
-    const {id} = useParams();
-
-    const [blog, setBlog] = useState({})
-
+    const { id } = useParams();
 
 
     useEffect(() => {
+        
 
         axios.get(`http://localhost:5000/api/v1/blog?id=${id}`)
 
@@ -33,7 +32,7 @@ const BlogDetails = () => {
 
 
 
-    const { _id, title, banner_image, images, tags, category, posted_date, author, descriptions, goal_descriptions } = blog;
+    const { title, banner_image, images, tags, category, posted_date, author, descriptions, goal_descriptions } = blog;
 
 
     
@@ -52,11 +51,10 @@ const BlogDetails = () => {
 
                             <div className="xl:flex-[5] ">
                                 <div className="space-y-4">
-                                    <h1 className="text-xl md:text-3xl font-bold  mb-5">{title}</h1>
                                     <div className="py-5 border-y flex items-center justify-between xl:px-4">
                                         <div className="flex items-center gap-3 flex-1">
-                                            <img className=" w-14 h-14 rounded-md " src={author.picture} alt="Author" />
-                                            <span className="font-semibold">{author.name}</span>
+                                            <img className=" w-14 h-14 rounded-md " src={author?.picture} alt="Author" />
+                                            <span className="font-semibold">{author?.name}</span>
                                         </div>
                                         <div className="flex-1 flex justify-end space-y-2">
                                             <div>
@@ -65,28 +63,29 @@ const BlogDetails = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description1}</p>
+                                    <h1 className="text-xl md:text-3xl font-bold  mb-5">{title}</h1>
+                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions?.description1}</p>
                                     <img className="rounded-md w-full" src={banner_image} alt="Banner Image" />
                                     <div className="space-y-2">
-                                        <h3 className="font-semibold">{descriptions.short_title} :</h3>
-                                        <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description2}</p>
+                                        <h3 className="font-semibold">{descriptions?.short_title} :</h3>
+                                        <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions?.description2}</p>
                                     </div>
-                                    <div className="relative">
-                                        <p className=" text-sm md:text-base text-white font-medium text-justify p-4 bg-[#F01543] rounded-md ">{goal_descriptions.goal}</p>
-                                        <img className="absolute h-full top-0 right-5" src="https://i.ibb.co/zmW1ZD9/after-icon.png" alt="" />
+                                    <div className="relative  p-4 md:p-10 bg-[#F01543] rounded-md ">
+                                        <p className=" text-sm md:text-base text-white font-semibold text-justify ">{goal_descriptions?.goal}</p>
+                                        <img className="absolute top-1/2 left-20 transform -translate-x-1/2 -translate-y-1/2 " src="https://i.ibb.co/zmW1ZD9/after-icon.png" alt="" />
                                     </div>
-                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description3}</p>
+                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions?.description3}</p>
                                     <div className="flex flex-col md:flex-row gap-4 ">
                                         {
-                                            images.map((image, i) => <div className="flex-1" key={i}>
-                                                <img  className=" rounded-md w-full" src={image} alt="Banner Image" />
-                                            </div> )
+                                            images && images.map((image, i) => <div className="flex-1" key={i}>
+                                                <img className=" rounded-md w-full h-full" src={image} alt="Banner Image" />
+                                            </div>)
                                         }
                                     </div>
                                     <div className="p-5 bg-[#F9FAFB] rounded-md flex items-center gap-4 ">
                                         <h1 className="text-xl md:text-2xl flex items-center gap-2 font-semibold"><IoPricetagsOutline></IoPricetagsOutline> :</h1>
                                         {
-                                            tags.map((tag, i) => <span className="font-medium text-[#F01543]" key={i}>#{tag}</span>)
+                                            tags && tags.map((tag, i) => <span className="font-medium text-[#F01543]" key={i}>#{tag}</span>)
                                         }
                                     </div>
                                 </div>
