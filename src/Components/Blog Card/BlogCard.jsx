@@ -13,8 +13,8 @@ const BlogCard = ({blog}) => {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine" 
                 className=" flex flex-col justify-between gap-5 ">
-                <div>
-                    <img className="w-full rounded " src={banner_image} alt="" />
+                <div className="overflow-hidden">
+                    <img className="w-full rounded hover:scale-125 duration-500 " src={banner_image} alt="" />
                 </div>
                 <div className="flex-1 flex-flex-col gap-3 justify-between">
                     <div className="h-full flex flex-col gap-3 justify-between">
