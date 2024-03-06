@@ -65,6 +65,33 @@ const BlogDetails = () => {
                                     </div>
                                 </div>
 
+                                <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
+                                    <h4 className="text-xl font-semibold">Follow Us</h4>
+                                    <div className="flex items-center justify-center xl:justify-normal gap-3">
+                                        <Link>
+                                            <button className="p-3.5 bg-white rounded-lg text-[#F01543] hover:bg-[#F01543] hover:text-white focus:bg-[#F01543] focus:text-white duration-500 ">
+                                                <FaFacebookF className="text-xl"></FaFacebookF>
+                                            </button>
+                                        </Link>
+                                        <Link>
+                                            <button className="p-3.5 bg-white rounded-lg text-[#F01543] hover:bg-[#F01543] hover:text-white focus:bg-[#F01543] focus:text-white duration-500 ">
+                                                <FaTwitter className="text-xl"></FaTwitter>
+                                            </button>
+                                        </Link>
+                                        <Link>
+                                            <button className="p-3.5 bg-white rounded-lg text-[#F01543] hover:bg-[#F01543] hover:text-white focus:bg-[#F01543] focus:text-white duration-500 ">
+                                                <FaInstagram className="text-xl"></FaInstagram>
+                                            </button>
+                                        </Link>
+                                        <Link>
+                                            <button className="p-3.5 bg-white rounded-lg text-[#F01543] hover:bg-[#F01543] hover:text-white focus:bg-[#F01543] focus:text-white duration-500 ">
+                                                <FaYoutube className="text-xl"></FaYoutube>
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+
+
                             </aside>
                         </div>
                     </div>
