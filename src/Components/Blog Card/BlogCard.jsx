@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 const BlogCard = ({blog}) => {
     
 
-    console.log(blog);
     const { _id, title, banner_image, category, posted_date, descriptions, } = blog;
+
+    
     return (
         <>
             <div data-aos="fade-up"

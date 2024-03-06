@@ -8,8 +8,12 @@ import { Link } from "react-router-dom";
 import { BiCategoryAlt } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { MdOutlineDateRange } from "react-icons/md";
+import { IoPricetagsOutline } from "react-icons/io5";
 
 const BlogDetails = () => {
+
+
 
     const {id} = useParams();
 
@@ -25,6 +29,13 @@ const BlogDetails = () => {
 
     }, [])
 
+    console.log(blog);
+
+
+
+    const { _id, title, banner_image, images, tags, category, posted_date, author, descriptions, goal_descriptions } = blog;
+
+
     
     return (
         <>
@@ -37,10 +48,50 @@ const BlogDetails = () => {
             <section>
                 <div className="container mx-auto">
                     <div className="mx-4">
-                        <div className="flex flex-col-reverse xl:flex-row  gap-6">
-                            <div className="xl:flex-[5] grid grid-cols-1 md:grid-cols-2 gap-4">
-                                
+                        <div className="flex flex-col-reverse xl:flex-row gap-10  xl:gap-6">
+
+                            <div className="xl:flex-[5] ">
+                                <div className="space-y-4">
+                                    <h1 className="text-xl md:text-3xl font-bold  mb-5">{title}</h1>
+                                    <div className="py-5 border-y flex items-center justify-between xl:px-4">
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <img className=" w-14 h-14 rounded-md " src={author.picture} alt="Author" />
+                                            <span className="font-semibold">{author.name}</span>
+                                        </div>
+                                        <div className="flex-1 flex justify-end space-y-2">
+                                            <div>
+                                                <span className="flex items-center gap-2 text-sm md:text-base font-medium "><MdOutlineDateRange className="text-xl"></MdOutlineDateRange> {posted_date} </span>
+                                                <span className="flex items-center gap-2 text-sm md:text-base font-medium "><BiCategoryAlt className="text-xl"></BiCategoryAlt> {category} </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description1}</p>
+                                    <img className="rounded-md w-full" src={banner_image} alt="Banner Image" />
+                                    <div className="space-y-2">
+                                        <h3 className="font-semibold">{descriptions.short_title} :</h3>
+                                        <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description2}</p>
+                                    </div>
+                                    <div className="relative">
+                                        <p className=" text-sm md:text-base text-white font-medium text-justify p-4 bg-[#F01543] rounded-md ">{goal_descriptions.goal}</p>
+                                        <img className="absolute h-full top-0 right-5" src="https://i.ibb.co/zmW1ZD9/after-icon.png" alt="" />
+                                    </div>
+                                    <p className=" text-gray-500 text-sm md:text-base font-medium text-justify ">{descriptions.description3}</p>
+                                    <div className="flex flex-col md:flex-row gap-4 ">
+                                        {
+                                            images.map((image, i) => <div className="flex-1" key={i}>
+                                                <img  className=" rounded-md w-full" src={image} alt="Banner Image" />
+                                            </div> )
+                                        }
+                                    </div>
+                                    <div className="p-5 bg-[#F9FAFB] rounded-md flex items-center gap-4 ">
+                                        <h1 className="text-xl md:text-2xl flex items-center gap-2 font-semibold"><IoPricetagsOutline></IoPricetagsOutline> :</h1>
+                                        {
+                                            tags.map((tag, i) => <span className="font-medium text-[#F01543]" key={i}>#{tag}</span>)
+                                        }
+                                    </div>
+                                </div>
                             </div>
+
                             <aside className="xl:flex-[2] space-y-8">
                                 
                                 <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
@@ -53,7 +104,7 @@ const BlogDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
+                                <div className=" hidden xl:block p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
                                     <h4 className="text-xl font-semibold">Categories</h4>
                                     <div>
                                         <ul className="grid grid-cols-1 md:grid-cols-2">
@@ -65,7 +116,7 @@ const BlogDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
+                                <div className=" hidden xl:flex p-5 bg-[#F9FAFB] rounded-md space-y-4 ">
                                     <h4 className="text-xl font-semibold">Follow Us</h4>
                                     <div className="flex items-center justify-center xl:justify-normal gap-3">
                                         <Link>
@@ -90,7 +141,6 @@ const BlogDetails = () => {
                                         </Link>
                                     </div>
                                 </div>
-
 
                             </aside>
                         </div>
