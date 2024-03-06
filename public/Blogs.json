@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "Exploring Culinary Delights and Gastronomic Adventures.",
         "banner_image": "https://i.ibb.co/QksxZc5/top-view-hungry-businesswoman-eating-working-23-2148515937.jpg",
         "images": [
@@ -28,6 +29,7 @@
         }
     },
     {
+        "id": 2,
         "title": "Flavorful Fork: Exploring the World of",
         "banner_image": "https://i.ibb.co/fD3wDBc/explore-food2.jpg",
         "images": [
@@ -56,6 +58,7 @@
         }
     },
     {
+        "id": 3,
         "title": "Hungry Wanderer, Global Flavors Explored.",
         "banner_image": "https://i.ibb.co/MSVvr9t/explore-food4.jpg",
         "images": [
@@ -84,6 +87,7 @@
         }
     },
     {
+        "id": 4,
         "title": "Chef Spotlight: Behind the Scenes of Culinary Mastery",
         "banner_image": "https://i.ibb.co/R2tFZ7h/explore-food6.jpg",
         "images": [
@@ -112,6 +116,7 @@
         }
     },
     {
+        "id": 5,
         "title": "Flavorful Fusion: Exploring the Art of Culinary Blending",
         "banner_image": "https://i.ibb.co/d62Y0h9/recipe3.jpg",
         "images": [
@@ -140,6 +145,7 @@
         }
     },
     {
+        "id": 6,
         "title": "Time-Honored Recipes with a Modern Twist",
         "banner_image": "https://i.ibb.co/nkJ22wY/explore-food.jpg",
         "images": [
@@ -168,6 +174,7 @@
         }
     },
     {
+        "id": 7,
         "title": "Tender fried baby squid with a salt, pepper",
         "banner_image": "https://i.ibb.co/J5NBcsY/tender-fried-1.jpg",
         "images": [

@@ -1,11 +1,12 @@
 import { MdOutlineDateRange } from "react-icons/md";
 import { BiCategoryAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({blog}) => {
     
 
     console.log(blog);
-    const {title, banner_image, images, tags, category, posted_date, author, descriptions, goal_descriptions} = blog;
+    const { _id, title, banner_image, category, posted_date, descriptions, } = blog;
     return (
         <>
             <div data-aos="fade-up"
@@ -25,7 +26,9 @@ const BlogCard = ({blog}) => {
                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><MdOutlineDateRange className="text-xl"></MdOutlineDateRange> {posted_date} </span>
                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><BiCategoryAlt className="text-xl"></BiCategoryAlt> {category} </span>
                             </div>
-                            <button className=" text-[#F01543] w-full px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 ">Read More</button>
+                            <Link to={`/details/${_id}`}>
+                                <button className=" text-[#F01543] w-full px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 ">Read More</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

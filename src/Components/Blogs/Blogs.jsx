@@ -16,7 +16,7 @@ const Blogs = () => {
 
     useEffect(() => {
 
-        axios.get('Blogs.json')
+        axios.get('http://localhost:5000/api/v1/blogs')
 
         .then(res => setBlogs(res.data));
 
