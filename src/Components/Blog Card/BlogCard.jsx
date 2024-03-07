@@ -21,9 +21,9 @@ const BlogCard = ({blog}) => {
                 <div className="flex-1 flex-flex-col gap-3 justify-between">
                     <div className="h-full flex flex-col gap-3 justify-between">
                         <h1 className="text-xl font-bold">{title}</h1>
-                        <p className="text-sm md:text-base font-medium ">{descriptions.description1.slice(0, 80)} ...</p>
+                        <p className="text-sm md:text-base font-medium ">{descriptions?.description1.slice(0, 80)} ...</p>
                         <div className="space-y-3">
-                            <div className=" py-3 border-t border-b flex justify-between">
+                            <div className=" py-3 border-t flex justify-between">
                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><MdOutlineDateRange className="text-xl"></MdOutlineDateRange> {posted_date} </span>
                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><BiCategoryAlt className="text-xl"></BiCategoryAlt> {category} </span>
                             </div>

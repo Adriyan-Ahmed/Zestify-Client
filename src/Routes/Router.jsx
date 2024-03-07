@@ -7,6 +7,7 @@ import Error from "../Pages/Error/Error";
 import Blog from "../Pages/Blog/Blog";
 import BlogDetails from "../Pages/Blog Details/BlogDetails";
 import Menu from "../Pages/Menu/Menu";
+import Food from "../Pages/Food/Food";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const Router = createBrowserRouter([
         {
           path: "/menu",
           element: <Menu></Menu>
+        },
+        {
+          path: "/food/:id",
+          element: <Food></Food>
         }
     ]
   },

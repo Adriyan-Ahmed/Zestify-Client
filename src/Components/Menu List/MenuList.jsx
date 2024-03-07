@@ -26,7 +26,7 @@ console.log(foods);
         <>
             <div className="container mx-auto">
                 <div className="mx-4">
-                    <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5">
+                    <div className="grid gird-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-5">
                         {
                             foods.slice(0,10).map(food => <FoodCard key={food._id} food={food}></FoodCard> )
                         }
