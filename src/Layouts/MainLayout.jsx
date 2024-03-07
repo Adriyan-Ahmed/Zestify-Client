@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
 
 const MainLayout = () => {
     return (
@@ -18,6 +19,7 @@ const MainLayout = () => {
                 <Footer></Footer>
             </footer>
             <ToastContainer></ToastContainer>
+            <ScrollToTop className="pl-1.5" smooth />
         </>
     );
 };

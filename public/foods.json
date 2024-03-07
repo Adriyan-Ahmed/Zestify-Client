@@ -1,0 +1,282 @@
+[
+    {
+        "category": "Break Fast",
+        "name": "Classic Bruschetta",
+        "image": "https://i.ibb.co/vYNLbYM/bruschetta.jpg",
+        "description": "Savor the freshness of diced tomatoes, garlic, and basil on toasted baguette slices. Revitalize your senses with our Green Tea Smoothie. Our Classic Bruschetta is drizzled with balsamic glaze for an exquisite burst of flavor.Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "tomatoes",
+            "garlic",
+            "basil",
+            "baguette",
+            "balsamic glaze"
+        ],
+        "preparations": [
+            "Dice tomatoes and mix with garlic and basil",
+            "Toast baguette slices",
+            "Top with tomato mixture and drizzle with balsamic glaze"
+        ]
+    },
+    {
+        "category": "Break Fast",
+        "name": "Mozzarella Sticks",
+        "image": "https://i.ibb.co/bLYS676/Mozzarella-Sticks.jpg",
+        "description": "Indulge in the crispy goodness of our Mozzarella Sticks.Revitalize your senses with our Green Tea Smoothie. Golden-fried to perfection, these sticks feature gooey mozzarella cheese inside and are served with marinara sauce.Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "mozzarella cheese",
+            "breadcrumbs",
+            "egg",
+            "marinara sauce"
+        ],
+        "preparations": [
+            "Cut mozzarella into sticks",
+            "Dip in egg, coat with breadcrumbs",
+            "Fry until golden brown, serve with marinara sauce"
+        ]
+    },
+    {
+        "category": "Break Fast",
+        "name": "Vegetable Spring Rolls",
+        "image": "https://i.ibb.co/Ycst7Nx/Vegetable-Spring-Rolls.jpg",
+        "description": "Enjoy the crispiness of our Vegetable Spring Rolls, Revitalize your senses with our Green Tea Smoothie. filled with a delightful mix of julienned vegetables and served with a sweet chili dipping sauce. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "spring roll wrappers",
+            "cabbage",
+            "carrots",
+            "bell peppers",
+            "sweet chili sauce"
+        ],
+        "preparations": [
+            "Julienne vegetables",
+            "Roll in spring roll wrappers",
+            "Fry until golden brown, serve with sweet chili sauce"
+        ]
+    },
+    {
+        "category": "Break Fast",
+        "name": "Shrimp Cocktail",
+        "image": "https://i.ibb.co/09ZhYVV/Shrimp-Cocktail.jpg",
+        "description": "Delight in the freshness of our Shrimp Cocktail.Revitalize your senses with our Green Tea Smoothie. Chilled shrimp served with tangy cocktail sauce, providing a perfect start to your dining experience.Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "shrimp",
+            "cocktail sauce",
+            "lemon"
+        ],
+        "preparations": [
+            "Boil shrimp until cooked",
+            "Chill and serve with cocktail sauce",
+            "Garnish with lemon wedges"
+        ]
+    },
+    {
+        "category": "Lunch",
+        "name": "Chicken Alfredo Pasta",
+        "image": "https://i.ibb.co/y6qK51n/Chicken-Alfredo-Pasta.jpg",
+        "description": "Indulge in the creamy richness of our Chicken Alfredo Pasta.Revitalize your senses. Grilled chicken breast served over fettuccine noodles, smothered in Alfredo sauce and sprinkled with Parmesan.Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "chicken breast",
+            "fettuccine noodles",
+            "Alfredo sauce",
+            "Parmesan cheese"
+        ],
+        "preparations": [
+            "Grill chicken and slice into strips",
+            "Cook fettuccine noodles",
+            "Combine with Alfredo sauce, top with chicken and Parmesan"
+        ]
+    },
+    {
+        "category": "Lunch",
+        "name": "Beef Tacos",
+        "image": "https://i.ibb.co/pyCfzzR/Beef-Tacos.jpg",
+        "description": "Tantalize your taste buds with our flavorful Beef Tacos.Revitalize your senses with our Green Tea Smoothie. Seasoned ground beef in soft corn tortillas, topped with lettuce, tomatoes, cheese, and a dollop of sour cream.Revitalize your senses with our Green.",
+        "ingredients": [
+            "ground beef",
+            "corn tortillas",
+            "lettuce",
+            "tomatoes",
+            "cheese",
+            "sour cream"
+        ],
+        "preparations": [
+            "Cook and season ground beef",
+            "Warm corn tortillas",
+            "Assemble tacos with beef, lettuce, tomatoes, cheese, and sour cream"
+        ]
+    },
+    {
+        "category": "Lunch",
+        "name": "Vegetarian Pizza",
+        "image": "https://i.ibb.co/Xp10pMd/Vegetarian-Pizza.jpg",
+        "description": "Delight in the medley of flavors on our Vegetarian Pizza. Revitalize your senses with our Green Tea Smoothie. A crispy crust topped with tomato sauce, mozzarella cheese, bell peppers, mushrooms, olives, and onions.Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "pizza dough",
+            "tomato sauce",
+            "mozzarella cheese",
+            "bell peppers",
+            "mushrooms",
+            "olives",
+            "onions"
+        ],
+        "preparations": [
+            "Roll out pizza dough",
+            "Spread with tomato sauce and mozzarella",
+            "Top with vegetables and bake until crust is golden"
+        ]
+    },
+    {
+        "category": "Lunch",
+        "name": "Salmon Teriyaki",
+        "image": "https://i.ibb.co/QPbycXw/Salmon-Teriyaki.jpg",
+        "description": "Satisfy your seafood craving with our Salmon Teriyaki. Revitalize your senses with our Green Tea Smoothie. Grilled salmon fillet glazed with a sweet and savory teriyaki sauce, served with steamed rice and vegetables. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "salmon fillet",
+            "teriyaki sauce",
+            "steamed rice",
+            "vegetables"
+        ],
+        "preparations": [
+            "Grill salmon and brush with teriyaki sauce",
+            "Prepare steamed rice and vegetables",
+            "Serve salmon over rice with vegetables on the side"
+        ]
+    },
+    {
+        "category": "Dinner",
+        "name": "Chocolate Mousse",
+        "image": "https://i.ibb.co/MGmZWyN/Chocolate-Mousse.jpg",
+        "description": "Indulge in the velvety smoothness of our Chocolate Mousse. Revitalize your senses with our Green Tea Smoothie. A decadent dessert made with rich chocolate, whipped cream, and a hint of vanilla, topped with chocolate shavings. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "chocolate",
+            "whipped cream",
+            "sugar",
+            "vanilla"
+        ],
+        "preparations": [
+            "Melt chocolate and let it cool",
+            "Whip cream with sugar and vanilla",
+            "Fold melted chocolate into whipped cream, refrigerate until set"
+        ]
+    },
+    {
+        "category": "Dinner",
+        "name": "Fruit Sorbet",
+        "image": "path/to/bruschetta.jpg",
+        "description": "Refresh your palate with our delightful Fruit Sorbet. Revitalize your senses with our Green Tea Smoothie. A medley of fresh seasonal fruits transformed intoRevitalize your senses with our Green. a cool and fruity frozen treat. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "assorted fruits",
+            "sugar",
+            "lemon juice"
+        ],
+        "preparations": [
+            "Blend fruits with sugar and lemon juice",
+            "Freeze until firm",
+            "Scoop and serve"
+        ]
+    },
+    {
+        "category": "Dinner",
+        "name": "Cheesecake",
+        "image": "https://i.ibb.co/8DXSLWX/Cheesecake.jpg",
+        "description": "Experience the heavenly taste of our Cheesecake. Revitalize your senses with our Green Tea Smoothie. A velvety smooth cream cheese filling on a graham cracker crust, Revitalize your senses with our Green Tea Smoothie. topped with your choice of fruit compote. Revitalize your senses with our Green Tea.",
+        "ingredients": [
+            "cream cheese",
+            "sugar",
+            "eggs",
+            "vanilla",
+            "graham cracker crust",
+            "fruit compote"
+        ],
+        "preparations": [
+            "Mix cream cheese, sugar, eggs, and vanilla",
+            "Pour onto graham cracker crust",
+            "Bake until set, top with fruit compote"
+        ]
+    },
+    {
+        "category": "Dinner",
+        "name": "Tiramisu",
+        "image": "https://i.ibb.co/KxTNsVJ/Tiramisu.jpg",
+        "description": "End your meal on a high note with our Tiramisu.Revitalize your senses with our Green Tea Smoothie. Layers of coffee-soaked ladyfingers and mascarpone cream,Revitalize your senses with our Green Tea Smoothie. dusted with cocoa powder for a delectable Italian dessert. Revitalize your senses with our Green Tea .",
+        "ingredients": [
+            "ladyfingers",
+            "mascarpone cheese",
+            "coffee",
+            "cocoa powder"
+        ],
+        "preparations": [
+            "Dip ladyfingers in coffee",
+            "Layer with mascarpone cream",
+            "Dust with cocoa powder and refrigerate"
+        ]
+    },
+    {
+        "category": "beverages",
+        "name": "Mango Lassi",
+        "image": "https://i.ibb.co/jZ06x6n/Mango-Lassi.jpgjpg",
+        "description": "Quench your thirst with the tropical goodness of our Mango Lassi. Revitalize your senses with our Green Tea Smoothie. A refreshing blend of ripe mangoes, yogurt, Revitalize your senses with our Green Tea Smoothie. and a touch of cardamom, Revitalize your senses with our Green Tea Smoothie. served chilled.",
+        "ingredients": [
+            "ripe mangoes",
+            "yogurt",
+            "cardamom",
+            "sugar",
+            "ice"
+        ],
+        "preparations": [
+            "Blend mangoes, yogurt, cardamom, and sugar",
+            "Serve over ice"
+        ]
+    },
+    {
+        "category": "beverages",
+        "name": "Classic Mojito",
+        "image": "https://i.ibb.co/t31xdmb/Classic-Mojito.jpg",
+        "description": "Revitalize your senses with our Green Tea Smoothie. Unwind with the crisp and zesty flavors of our Classic Mojito. Revitalize your senses with our Green Tea Smoothie. Fresh mint leaves muddled with lime wedges, simple syrup, and white rum, topped with soda water. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "mint leaves",
+            "lime",
+            "simple syrup",
+            "white rum",
+            "soda water"
+        ],
+        "preparations": [
+            "Muddle mint leaves and lime wedges",
+            "Add simple syrup and white rum",
+            "Top with soda water and ice"
+        ]
+    },
+    {
+        "category": "beverages",
+        "name": "Iced Caramel Macchiato",
+        "image": "https://i.ibb.co/drXgqms/Iced-Caramel-Macchiato.jpg",
+        "description": "Elevate your coffee experience with our Iced Caramel Macchiato. Revitalize your senses with our Green Tea Smoothie. Cold milk poured over espresso, Revitalize your senses with our Green Tea Smoothie. sweetened with vanilla syrup, and drizzled with caramel for a delightful treat. Revitalize your senses with our Green Tea Smoothie.",
+        "ingredients": [
+            "espresso",
+            "cold milk",
+            "vanilla syrup",
+            "caramel"
+        ],
+        "preparations": [
+            "Brew espresso and let it cool",
+            "Pour cold milk over espresso",
+            "Sweeten with vanilla syrup and drizzle with caramel"
+        ]
+    },
+    {
+        "category": "beverages",
+        "name": "Green Tea Smoothie",
+        "image": "https://i.ibb.co/r23nxG3/Green-Tea-Smoothie.jpg",
+        "description": "Revitalize your senses with our Green Tea Smoothie. Elevate your coffee experience with our Iced Caramel Macchiato. A blend of matcha green tea, banana, spinach, and almond milk, providing a healthy and energizing beverage. Revitalize your senses with our Green Tea Smoothie. Elevate your coffee experience with our Iced Caramel Macchiato.",
+        "ingredients": [
+            "matcha green tea",
+            "banana",
+            "spinach",
+            "almond milk",
+            "ice"
+        ],
+        "preparations": [
+            "Blend matcha, banana, spinach, almond milk, and ice until smooth",
+            "Serve chilled"
+        ]
+    }
+]

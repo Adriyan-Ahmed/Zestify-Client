@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Error from "../Pages/Error/Error";
 import Blog from "../Pages/Blog/Blog";
 import BlogDetails from "../Pages/Blog Details/BlogDetails";
+import Menu from "../Pages/Menu/Menu";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const Router = createBrowserRouter([
           path: "/details/:id",
           element: <BlogDetails></BlogDetails>
           
+        },
+        {
+          path: "/menu",
+          element: <Menu></Menu>
         }
     ]
   },

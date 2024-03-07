@@ -56,8 +56,8 @@ const BlogDetails = () => {
                                             <img className=" w-14 h-14 rounded-md " src={author?.picture} alt="Author" />
                                             <span className="font-semibold">{author?.name}</span>
                                         </div>
-                                        <div className="flex-1 flex justify-end space-y-2">
-                                            <div>
+                                        <div className="flex-1 flex justify-end">
+                                            <div className="space-y-2.5">
                                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><MdOutlineDateRange className="text-xl"></MdOutlineDateRange> {posted_date} </span>
                                                 <span className="flex items-center gap-2 text-sm md:text-base font-medium "><BiCategoryAlt className="text-xl"></BiCategoryAlt> {category} </span>
                                             </div>
@@ -82,10 +82,10 @@ const BlogDetails = () => {
                                             </div>)
                                         }
                                     </div>
-                                    <div className="p-5 bg-[#F9FAFB] rounded-md flex items-center gap-4 ">
+                                    <div className="p-5 bg-[#F9FAFB] rounded-md flex items-center gap-4  ">
                                         <h1 className="text-xl md:text-2xl flex items-center gap-2 font-semibold"><IoPricetagsOutline></IoPricetagsOutline> :</h1>
                                         {
-                                            tags && tags.map((tag, i) => <span className="font-medium text-[#F01543]" key={i}>#{tag}</span>)
+                                            tags && tags.map((tag, i) => <span className="font-medium text-[#F01543] " key={i}>#{tag}</span>)
                                         }
                                     </div>
                                 </div>
