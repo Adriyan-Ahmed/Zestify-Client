@@ -4,11 +4,16 @@
 
 import { Link, NavLink } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexts/Authentication/Authentication";
 
 
 
 
 const Navbar = () => {
+
+
+    const { User, LogOutAccount } = useContext(AuthContext);
 
 
 
@@ -57,38 +62,48 @@ const Navbar = () => {
                                 </nav>
                             </div>
                         </div>
-                        <div className="navbar-end">
-                                <div className="dropdown dropdown-end">
-                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
-                                    <MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart>
-                                    </div>
-                                    <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
-                                        <div className="card-body">
-                                            <span className="font-bold text-lg">8 Items</span>
-                                            <span className="text-info">Subtotal: $999</span>
-                                            <div className="card-actions">
-                                                <button className="btn btn-primary btn-block">View cart</button>
+                        <div className="navbar-end gap-2">
+                            {
+                                User ? <>
+                                    <div className="dropdown dropdown-end">
+                                        <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
+                                            <MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart>
+                                        </div>
+                                        <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                                            <div className="card-body">
+                                                <span className="font-bold text-lg">8 Items</span>
+                                                <span className="text-info">Subtotal: $999</span>
+                                                <div className="card-actions">
+                                                    <button className="btn btn-primary btn-block">View cart</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="dropdown dropdown-end">
-                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-square avatar">
-                                        <div className="w-10 rounded-lg">
-                                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                        </div>
+                                    <div className="dropdown dropdown-end">
+                                        <abbr title={User.displayName}>
+                                            <label tabIndex={0} className="btn btn-ghost btn-square avatar">
+                                                <div className="w-10 rounded-lg">
+                                                    <img src={User?.photoURL} />
+                                                </div>
+                                            </label>
+                                        </abbr>
+                                        <ul tabIndex={0} className=" dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded w-52">
+                                            <li className="bg-transparent py-2 md:py-2 md:px-2 font-bold text-xs md:text-sm  rounded">{User.displayName}</li>
+                                            <li className="bg-transparent py-2 md:py-2 md:px-2 font-bold text-xs md:text-sm  rounded">
+                                                <Link className="justify-between">
+                                                    Profile
+                                                    <span className="badge">New</span>
+                                                </Link>
+                                            </li>
+                                            <li onClick={() => LogOutAccount().then(res => toast.success('Log Out Successful !! 👌'))} className="bg-transparent py-2 md:py-2 md:px-2 font-bold text-xs md:text-sm btn-ghost rounded"><Link>Logout</Link></li>
+                                        </ul>
                                     </div>
-                                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                        <li>
-                                            <a className="justify-between">
-                                                Profile
-                                                <span className="badge">New</span>
-                                            </a>
-                                        </li>
-                                        <li><a>Settings</a></li>
-                                        <li><a>Logout</a></li>
-                                    </ul>
-                                </div>
+                                    <button onClick={() => LogOutAccount().then(res => toast.success('Log Out Successful !! 👌'))} className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGOUT</button>
+                                </>
+                                    : <Link to='/login'>
+                                        <button className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGIN</button>
+                                    </Link>
+                            }
                             </div>
                         </div>
                     </div >
