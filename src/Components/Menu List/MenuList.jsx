@@ -28,7 +28,7 @@ console.log(foods);
                 <div className="mx-4">
                     <div className="grid gird-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-5">
                         {
-                            foods.slice(0,10).map(food => <FoodCard key={food._id} food={food}></FoodCard> )
+                            foods.map(food => <FoodCard key={food._id} food={food}></FoodCard> )
                         }
                     </div>
                 </div>
