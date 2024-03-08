@@ -24,8 +24,8 @@ const AddFood = () => {
             <form>
                 <section>
                     <div className="container mx-auto">
-                        <div className="mx-4 space-y-6">
-                            <div></div>
+                        <div className="mx-4">
+                            <div className="space-y-6"></div>
                         </div>
                     </div>
                 </section>
