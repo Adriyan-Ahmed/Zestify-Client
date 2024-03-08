@@ -63,6 +63,39 @@ const AddFood = () => {
                                         </div>
 
 
+                                        <div className="p-5 bg-[#F9FAFB] rounded-md space-y-4 md:space-y-0">
+                                            <div className="flex items-center gap-4 flex-col md:flex-row">
+
+
+                                                <div className="flex-1 w-full">
+                                                    <span className="font-semibold ml-6">Food Price</span>
+                                                    <div className="p-2 bg-white rounded-md">
+                                                        <input className="bg-[#F9FAFB] p-5 w-full rounded-md outline-none " type="text" name="price" placeholder="Food Price" required />
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="flex-1 w-full">
+                                                    <span className="font-semibold ml-6">Food Category</span>
+                                                    <div className="dropdown w-full p-2 bg-white">
+                                                        <span tabIndex={0} role="button" className="font-semibold cursor-pointer p-5 rounded-lg bg-[#F9FAFB] w-full flex items-center justify-between gap-3">
+                                                            {category}
+                                                            <FaChevronDown></FaChevronDown>
+                                                        </span>
+                                                        <div tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-md w-full">
+                                                            <span onClick={() => setCategory('Break Fast')} className="text-left py-3 cursor-pointer px-6 rounded font-semibold hover:bg-[#F01543] hover:text-[#F01543] hover:bg-opacity-15">BREAKFAST ITEMS</span>
+                                                            <span onClick={() => setCategory('Lunch')} className="text-left py-3 cursor-pointer px-6 rounded font-semibold hover:bg-[#F01543] hover:text-[#F01543] hover:bg-opacity-15">LUNCH ITEMS</span>
+                                                            <span onClick={() => setCategory('Dinner')} className="text-left py-3 cursor-pointer px-6 rounded font-semibold hover:bg-[#F01543] hover:text-[#F01543] hover:bg-opacity-15">DINNER ITEMS</span>
+                                                            <span onClick={() => setCategory('beverages')} className="text-left py-3 cursor-pointer px-6 rounded font-semibold hover:bg-[#F01543] hover:text-[#F01543] hover:bg-opacity-15">BEVERAGES</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
                                     </div>
 
 
@@ -71,6 +104,7 @@ const AddFood = () => {
                             </div>
                         </div>
                     </div>
+            </div>
                 </section>
             </form>
         </>
