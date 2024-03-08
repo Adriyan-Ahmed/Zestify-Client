@@ -67,13 +67,6 @@ const AddFood = () => {
 
 
 
-                                    <div className="flex-[3] space-y-5">
-                                        
-                                    </div>
-                                </div>
-
-
-                                <button className=" md:hidden mt-6 text-[#F01543] w-full px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 flex items-center justify-center gap-3 "> <FaCheck></FaCheck> Add Food</button>
 
                             </div>
                         </div>
