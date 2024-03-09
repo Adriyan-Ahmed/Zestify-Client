@@ -22,6 +22,7 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/blogs" >BLOGS</NavLink>,
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/menu" >MENU</NavLink>,
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/add-food" >ADD FOOD</NavLink>,
+        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="dashboard/profile" >DASHBOARD</NavLink>,
     ]
 
 

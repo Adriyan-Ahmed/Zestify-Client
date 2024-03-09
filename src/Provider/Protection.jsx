@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { Circles } from 'react-loader-spinner'
-import { AuthContext } from "../../Contexts/Authentication/Authentication";
+import { AuthContext } from "../Contexts/Authentication/Authentication";
+
 
 
 

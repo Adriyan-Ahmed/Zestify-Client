@@ -11,6 +11,7 @@ import Food from "../Pages/Food/Food";
 import AddFood from "../Pages/Add Food/AddFood";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import Profile from "../Pages/Profile/Profile";
+import Protection from "../Provider/Protection";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +36,7 @@ const Router = createBrowserRouter([
         },
         {
           path: "/details/:id",
-          element: <BlogDetails></BlogDetails>
+          element: <Protection><BlogDetails></BlogDetails></Protection>
           
         },
         {
@@ -44,11 +45,11 @@ const Router = createBrowserRouter([
         },
         {
           path: "/food/:id",
-          element: <Food></Food>
+          element: <Protection><Food></Food></Protection>
         },
         {
           path: "/add-food",
-          element: <AddFood></AddFood>
+          element: <Protection><AddFood></AddFood></Protection>
         }
     ]
   },
@@ -58,9 +59,9 @@ const Router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       {
-        path: "dashboard/profile",
+        path: "profile",
         element: <Profile></Profile>
-      }
+      },
     ]
   }
 ]);
