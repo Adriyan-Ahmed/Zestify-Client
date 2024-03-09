@@ -99,7 +99,7 @@ const Navbar = () => {
                                             <li onClick={() => LogOutAccount().then(res => toast.success('Log Out Successful !! 👌'))} className="bg-transparent py-2 md:py-2 md:px-2 font-bold text-xs md:text-sm btn-ghost rounded"><Link>Logout</Link></li>
                                         </ul>
                                     </div>
-                                    <button onClick={() => LogOutAccount().then(res => toast.success('Log Out Successful !! 👌'))} className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGOUT</button>
+                                    <button onClick={() => LogOutAccount().then(res => toast.success('Log Out Successful !! 👌'))} className="px-5 py-3 md:py-3.5 text-xs md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGOUT</button>
                                 </>
                                     : <Link to='/login'>
                                         <button className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGIN</button>

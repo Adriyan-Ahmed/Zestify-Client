@@ -10,9 +10,13 @@ const FoodCard = ({food}) => {
     const {_id, category, name, image, price,} = food;
     return (
         <>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div data-aos="fade-up"
+                data-aos-offset="100"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine" 
+                className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="rounded-tl-lg rounded-tr-lg">
-                    <img className="w-full" src={image} alt="" />
+                    <img className="w-full h-[260px] md:h-[220px] lg:h-[270px] xl:h-[270px] " src={image} alt="" />
                 </div>
                 <div className="p-6">
                     <div className="flex items-center justify-between pb-3 border-b">

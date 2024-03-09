@@ -29,18 +29,22 @@ const AddFood = () => {
 
 
                                 <div className="flex items-center justify-between">
-                                    <h1 className="flex items-end gap-3"><img className="w-10" src="https://i.ibb.co/2y25x3W/add-food-icon.png" alt="" /> <span className="text-2xl font-semibold">Add New Food</span></h1>
+                                    <h1 className="flex items-end gap-3">
+                                        <img className="w-10" src="https://i.ibb.co/2y25x3W/add-food-icon.png" alt="" />
+                                        <span className="text-2xl font-semibold">Add New Food</span>
+                                    </h1>
                                     <div className=" hidden md:flex flex-row-reverse items-center gap-5">
-                                        <button className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 flex items-center gap-2 "><FaCheck></FaCheck> Add Food</button>
-                                        <span className="px-10 bg-[#F01543] rounded text-white font-bold py-3.5 text-sm md:text-base lg:text-lg hover:bg-transparent hover:py-2.5 border-[#F01543] hover:border-2 hover:text-[#F01543] focus:text-[#F01543] focus:border-2 focus:py-2.5 focus:bg-transparent duration-500 flex items-center gap-2 cursor-pointer "><IoSaveOutline></IoSaveOutline> Save Draft</span>
+                                        <button className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 flex items-center gap-2 ">
+                                            <FaCheck></FaCheck> Add Food
+                                        </button>
+                                        <span className="px-10 bg-[#F01543] rounded text-white font-bold py-3.5 text-sm md:text-base lg:text-lg hover:bg-transparent hover:py-2.5 border-[#F01543] hover:border-2 hover:text-[#F01543] focus:text-[#F01543] focus:border-2 focus:py-2.5 focus:bg-transparent duration-500 flex items-center gap-2 cursor-pointer ">
+                                            <IoSaveOutline></IoSaveOutline> Save Draft
+                                        </span>
                                     </div>
                                 </div>
 
 
                                 <div className="flex flex-col lg:flex-row gap-6">
-
-
-
                                     <div className="flex-[7] space-y-9 ">
 
 
@@ -98,13 +102,40 @@ const AddFood = () => {
 
                                     </div>
 
+                                    <div className="flex-[3] space-y-5">
+                                        <div onClick={() => document.querySelector('#image').click()} className=" w-full rounded-md cursor-pointer min-h-80 px-8 flex items-center justify-center bg-[#F9FAFB]">
+                                            <input type="file" name="" id="image" accept="image/*" hidden
 
+                                                onChange={({ target: { files } }) => {
+                                                    files[0] && setFileName(files[0].name)
+                                                    if (files) {
+                                                        setImage(URL.createObjectURL(files[0]))
+                                                    }
+                                                }}
+                                            />
 
+                                            {
+                                                image ? <img className="max-h-72 p-2 bg-white rounded-md" src={image} alt={fileName} /> : <div className="text-[#F01543] space-y-4 font-semibold "><LuUpload className="text-3xl text-[#F01543] mx-auto "></LuUpload> <p>Browse Files to upload</p> </div>
+                                            }
 
+                                        </div>
+                                        {
+                                            fileName ? <div className="p-3 bg-[#F9FAFB] rounded-md flex items-center justify-between">
+                                                <p>{fileName}</p>
+                                                <span onClick={() => {
+                                                    setImage(null)
+                                                    setFileName('No Selected File')
+                                                }} className="p-4 bg-[#F01543] rounded text-white font-bold cursor-pointer  text-sm md:text-base lg:text-lg ">
+                                                    <MdDeleteOutline className="text-2xl"></MdDeleteOutline>
+                                                </span>
+                                            </div> : <></>
+                                        }
+                                    </div>
+                                </div>
+                                <button className=" md:hidden mt-6 text-[#F01543] w-full px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 flex items-center justify-center gap-3 "> <FaCheck></FaCheck> Add Food</button>
                             </div>
                         </div>
                     </div>
-            </div>
                 </section>
             </form>
         </>

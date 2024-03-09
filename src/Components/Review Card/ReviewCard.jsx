@@ -6,7 +6,7 @@ const ReviewCard = ({cardinfo}) => {
                 <div className="">
                     <div className="rating rating-sm gap-2">
                         <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" defaultChecked />
                         <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
