@@ -5,13 +5,12 @@ import { RiRestaurant2Line } from "react-icons/ri";
 import { IoIosSearch, IoMdAdd } from "react-icons/io";
 import { IoLogOutOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
-import './Dashboard.css'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Contexts/Authentication/Authentication";
 
 const Dashboard = () => {
 
-    const [isClose, setIsClose] = useState(false);
+    const [isClose, setIsClose] = useState(window.innerWidth < 768 ? true : false );
 
     const { User, LogOutAccount } = useContext(AuthContext);
 
@@ -19,7 +18,7 @@ const Dashboard = () => {
     const Links = [
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="profile" ><CgProfile className="text-2xl"></CgProfile><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>PROFILE</span></NavLink>,
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="cart" ><MdAddShoppingCart className="text-2xl"></MdAddShoppingCart><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>CART</span></NavLink>,
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="/add-food" ><span className="flex items-start"><RiRestaurant2Line className="text-2xl"></RiRestaurant2Line><IoMdAdd className="text-[10px] -ml-1"></IoMdAdd></span> <span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`} >ADD FOOD</span></NavLink>
+        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="add-food" ><span className="flex items-start"><RiRestaurant2Line className="text-2xl"></RiRestaurant2Line><IoMdAdd className="text-[10px] -ml-1"></IoMdAdd></span> <span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`} >ADD FOOD</span></NavLink>
     ]
 
 
@@ -31,8 +30,8 @@ const Dashboard = () => {
         <>
             <div>
                 <div>
-                    <div id="body" className="min-h-screen bg-blue-500">
-                        
+                    <div id="body" className="min-h-screen">
+
                         {/* Side Navbar's code start from here */}
                         <nav id="sidebar" className={`fixed top-0 left-0 h-[100%] overflow-hidden duration-700 w-[250px] bg-white space-y-14 z-10 border-r-2 ${isClose ? 'w-[73px] ' : ''}`}>
                             <div className="flex items-center pl-2 pt-2">
@@ -54,18 +53,18 @@ const Dashboard = () => {
                         </nav>
                         {/* Side Navbar's code ends here */}
 
-                        <section className={`relative min-h-screen py-2.5 px-4 bg-white duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
+                        <section className={`relative min-h-screen py-2.5 bg-white duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
 
                             {/* Dashboard Top Nav's Code Start from here */}
-                            <div className={`flex items-center justify-between gap-2 fixed top-0 py-4 px-4 duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
-                                <FaBars onClick={() => handleSidebarToggle()} className="text-2xl cursor-pointer hidden md:block " id="sidebar-toggle"></FaBars>
+                            <div className={`flex items-center justify-between gap-2 z-40 fixed top-0 py-4 px-4 bg-white duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
+                                <FaBars onClick={() => handleSidebarToggle()} className="text-2xl cursor-pointer hidden lg:block " id="sidebar-toggle"></FaBars>
                                 <div className=" relative max-w-[600px] w-full">
                                     <div className="relative max-w-[600px] w-full ">
                                         <div className="bg-white rounded-md">
                                             <input className="bg-[#F9FAFB] font-medium p-5 w-full rounded-md outline-none " type="text" placeholder="What you Search?" required />
                                         </div>
                                         <span className="absolute top-[9px] right-2.5">
-                                            <button className=" text-[#F01543] p-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-100 "><IoIosSearch></IoIosSearch></button>
+                                            <button className=" p-3.5 border hover:bg-[#F01543] border-[#F01543] text-[#F01543] hover:text-white focus:text-white  focus:bg-[#F01543] duration-500 text-base rounded"><IoIosSearch></IoIosSearch></button>
                                         </span>
                                     </div>
                                 </div>
@@ -98,6 +97,10 @@ const Dashboard = () => {
                             </div>
                             {/* Dashboard Top Nav's Code Ends here */}
 
+                            <section className="min-h-screen mt-24 space-y-20 md:space-y-28 lg:space-y-32 xl:space-y-44 ">
+                                <Outlet></Outlet>
+                            </section>
+                            
                         </section>
                     </div>
                 </div>

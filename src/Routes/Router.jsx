@@ -47,10 +47,6 @@ const Router = createBrowserRouter([
           path: "/food/:id",
           element: <Protection><Food></Food></Protection>
         },
-        {
-          path: "/add-food",
-          element: <Protection><AddFood></AddFood></Protection>
-        }
     ]
   },
   {
@@ -62,6 +58,10 @@ const Router = createBrowserRouter([
         path: "profile",
         element: <Profile></Profile>
       },
+      {
+        path: "add-food",
+        element: <Protection><AddFood></AddFood></Protection>
+      }
     ]
   }
 ]);
