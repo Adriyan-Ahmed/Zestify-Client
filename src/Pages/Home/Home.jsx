@@ -1,3 +1,7 @@
+// -------------------------------- //
+// -------- Imported Items -------- //
+// -------------------------------- //
+
 import Banner from "../../Components/Banner/Banner";
 import HomeFood from "../../Components/Home Food/HomeFood";
 import OurCategories from "../../Components/Our Categories/OurCategories";

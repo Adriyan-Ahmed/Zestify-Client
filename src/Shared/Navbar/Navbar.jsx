@@ -6,6 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useContext } from "react";
 import { AuthContext } from "../../Contexts/Authentication/Authentication";
+import { toast } from "react-toastify";
 
 
 
@@ -21,8 +22,6 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/" >HOME</NavLink>,
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/blogs" >BLOGS</NavLink>,
         <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/menu" >MENU</NavLink>,
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="/add-food" >ADD FOOD</NavLink>,
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="dashboard/profile" >DASHBOARD</NavLink>,
     ]
 
 
@@ -43,7 +42,7 @@ const Navbar = () => {
                                 <label tabIndex={0} className="btn btn-ghost btn-square">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                                 </label>
-                                
+
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-200  shadow-md rounded-md w-52 z-10 gap-3">
                                     <Link className="">
                                         <div className="flex items-center justify-center gap-0">
@@ -54,12 +53,18 @@ const Navbar = () => {
                                     {
                                         Links.map((Link, i) => <li key={i}>{Link}</li>)
                                     }
+                                    {
+                                        User && <li><NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="dashboard/profile" >DASHBOARD</NavLink></li>
+                                    }
                                 </ul>
                             </div>
                             <div className="hidden xl:flex">
-                                <nav className="flex items-center gap-3">
+                                <nav className="flex items-center gap-3"> 
                                     {
                                         Links.map((Link, i) => <span key={i}>{Link}</span>)
+                                    }
+                                    {
+                                        User && <span><NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 lg:bg-transparent py-2.5 px-5 text-[#F01543] lg:border-b-2 lg:border-[#F01543] font-bold text-sm md:text-base rounded lg:rounded-none` : `bg-transparent py-2.5 px-5 font-bold text-sm md:text-base  rounded `} to="dashboard/profile" >DASHBOARD</NavLink></span>
                                     }
                                 </nav>
                             </div>
@@ -106,9 +111,9 @@ const Navbar = () => {
                                         <button className="px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border-2 rounded btn-1 hover:text-white hover:border-[#F01543] duration-1000 ">LOGIN</button>
                                     </Link>
                             }
-                            </div>
                         </div>
-                    </div >
+                    </div>
+                </div >
             </section>
         </>
     );

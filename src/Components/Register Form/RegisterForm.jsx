@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa6";
 import { AuthContext } from '../../Contexts/Authentication/Authentication';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const RegisterForm = () => {
 
@@ -47,6 +48,8 @@ const RegisterForm = () => {
         const photo = form.photo.value;
         
         const name = form.name.value;
+
+        const user = {name, photo, email, pass};
         
 
 
@@ -59,6 +62,8 @@ const RegisterForm = () => {
                     updatingProfile(res, name, photo)
                 
                     toast.success('Congratulations ! Registration completed Successfully ! 🤩💕')
+
+                    saveUserInfo(name, photo, email, pass)
                 
                     form.reset();
 
@@ -105,6 +110,8 @@ const RegisterForm = () => {
 
                     })
 
+                    saveUserInfo(res.user.displayName, res.user.photoURL, res.user.email)
+
                     navigate();
 
                 }
@@ -119,6 +126,17 @@ const RegisterForm = () => {
 
     }
 
+
+
+    const saveUserInfo = (name, image, email, pass) => {
+
+        let user = {name, image, email, pass };
+
+        console.log(user);
+
+        axios.post(`http://localhost:5000/api/v1/user`, user )
+        .then(res => console.log(res))
+    }
 
 
 

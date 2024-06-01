@@ -35,7 +35,7 @@ const Router = createBrowserRouter([
           element: <Blog></Blog>
         },
         {
-          path: "/details/:id",
+          path: "blogs/details/:id",
           element: <Protection><BlogDetails></BlogDetails></Protection>
           
         },
@@ -51,12 +51,12 @@ const Router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <Protection><Dashboard></Dashboard></Protection>,
     errorElement: <Error></Error>,
     children: [
       {
         path: "profile",
-        element: <Profile></Profile>
+        element: <Protection><Profile></Profile></Protection>
       },
       {
         path: "add-food",

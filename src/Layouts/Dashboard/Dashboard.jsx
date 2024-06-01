@@ -1,12 +1,13 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
-import { MdAddShoppingCart, MdOutlineAddShoppingCart } from "react-icons/md";
+import { MdAddShoppingCart } from "react-icons/md";
 import { RiRestaurant2Line } from "react-icons/ri";
 import { IoIosSearch, IoMdAdd } from "react-icons/io";
-import { IoLogOutOutline } from "react-icons/io5";
+import { IoLogOutOutline, IoHomeOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Contexts/Authentication/Authentication";
+import { ToastContainer } from "react-toastify";
 
 const Dashboard = () => {
 
@@ -46,7 +47,8 @@ const Dashboard = () => {
                                         }
                                     </div>
                                     <div className="pb-32 space-y-3 py-3 border-t ">
-                                        <li className=" font-semibold rounded w-full "><span className="flex items-center gap-2 py-2.5 px-5 rounded"><IoLogOutOutline className="text-2xl"></IoLogOutOutline> <span className={` duration-700 text-sm md:text-base ${isClose ? ' scale-0 w-0 pointer-events-none' : ''}`}>LOGOUT</span></span></li>
+                                        <Link to="/"><li className=" font-semibold rounded w-full "><span className="flex items-center gap-2 py-2.5 px-5 rounded"><IoHomeOutline className="text-2xl"></IoHomeOutline> <span className={` duration-700 text-sm md:text-base ${isClose ? ' scale-0 w-0 pointer-events-none' : ''}`}>HOME</span></span></li></Link>
+                                        <button onClick={() => LogOutAccount()} className="w-full"><li className=" font-semibold rounded w-full "><span className="flex items-center gap-2 py-2.5 px-5 rounded"><IoLogOutOutline className="text-2xl"></IoLogOutOutline> <span className={` duration-700 text-sm md:text-base ${isClose ? ' scale-0 w-0 pointer-events-none' : ''}`}>LOGOUT</span></span></li></button>
                                     </div>
                                 </ul>
                             </div>
@@ -105,6 +107,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </>
     );
 };

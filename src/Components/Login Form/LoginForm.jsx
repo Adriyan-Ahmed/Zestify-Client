@@ -133,7 +133,7 @@ const LoginForm = () => {
                         <div className='py-8 px-6 shadow-xl w-full md:w-8/12 mx-auto bg-base-100 rounded-md space-y-8 '>
                             <div className='space-y-2'>
                                 <h1 className='text-2xl font-bold'>LOGIN</h1>
-                                <p className='font-medium text-gray-400'>Doesn't have an account yet? <Link className='text-[#A60FEC] font-semibold underline' to="/register" >Sign Up</Link> </p>
+                                <p className='font-medium text-gray-400'>Doesn't have an account yet? <Link className='text-[#F01543] font-semibold underline' to="/register" >Sign Up</Link> </p>
                             </div>
                             <div>
                                 <form onSubmit={handleLogin} className='space-y-5'>

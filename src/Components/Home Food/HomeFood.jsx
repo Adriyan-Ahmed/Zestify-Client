@@ -1,3 +1,8 @@
+// -------------------------------- //
+// -------- Imported Items -------- //
+// -------------------------------- //
+
+
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import axios from "axios";
@@ -6,6 +11,7 @@ import FoodCard from "../Food Card/FoodCard";
 const HomeFood = () => {
     
     const [foods, setFoods] = useState([]);
+
 
     const [block, setBlock] = useState(6)
 
@@ -30,19 +36,25 @@ const HomeFood = () => {
         },
         {
             id: 4,
-            name: "beverages"
+            name: "Beverages"
         }
     ];
+
+
     const [tabs, setTabs] = useState(Categories[0])
 
+
     const url = tabs.name === Categories[0].name ? "http://localhost:5000/api/v1/menu" : `http://localhost:5000/api/v2/menu?category=${tabs.name}`
+
+
     useEffect(() => {
+
         axios.get(url)
+
             .then(res => setFoods(res.data))
+
     }, [tabs])
 
-
-    console.log(foods);
 
     return (
         <>
@@ -50,18 +62,18 @@ const HomeFood = () => {
                 <div className="mx-4">
                     <div className="space-y-9">
                         <div data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom" className="w-9/12 md:w-7/12 xl:w-4/12 mx-auto text-center space-y-3 lg:space-y-6 mb-5 md:mb-10 xl:mb-14">
+                            data-aos-anchor-placement="top-bottom" className="w-10/12 md:w-7/12 xl:w-4/12 mx-auto text-center space-y-3 lg:space-y-6 mb-5 md:mb-10 xl:mb-14">
                             <h1 className="text-2xl md:text-4xl font-bold text-[#F01543] ">FEATURED FOODS</h1>
-                            <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-5 md:leading-7 lg:leading-8 font-medium ">Browse a Variety of Job Opportunities Categorized for Your Convenience. Find Your Dream Job in the Industry of Your Choice.</p>
+                            <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-6 md:leading-7 lg:leading-8 font-medium ">Browse a Variety of Job Opportunities Categorized for Your Convenience. Find Your Dream Job in the Industry of Your Choice.</p>
                         </div>
                         <div data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom" className="flex gap-2 md:gap-5 xl:gap-7 items-center justify-center">
+                            data-aos-anchor-placement="top-bottom" className="flex flex-wrap gap-x-7 gap-y-5 md:gap-5 xl:gap-7 items-center justify-center">
                             {
-                                Categories.map(Category => <button key={Category.id} onClick={() => setTabs(Category)} className={tabs.id === Category.id ? ` py-2 md:py-3 px-3 md:px-6 lg:px-9 relative rounded` : `btn-border py-2 md:py-3 px-3 md:px-6 lg:px-9 font-bold text-xs md:text-sm `}>
+                                Categories.map(Category => <button key={Category.id} onClick={() => setTabs(Category)} className={tabs.id === Category.id ? ` py-2 md:py-3 px-5 md:px-6 lg:px-9 relative  ` : `btn-border py-1.5 md:py-3 px-5 md:px-6 lg:px-9 font-bold text-base md:text-sm border-red-500 border rounded `}>
                                     {
-                                        tabs.id === Category.id && <motion.div layoutId="active category" className={`absolute inset-0 b bg-[#F01543] rounded-md`} />
+                                        tabs.id === Category.id && <motion.div layoutId="active category" className={`absolute inset-0 b bg-[#F01543] rounded md:rounded-md`} />
                                     }
-                                    <span className={tabs.id === Category.id ? `relative text-white font-bold text-xs md:text-sm` : `relative card-title-design font-bold text-xs md:text-sm`} >{Category.name}</span>
+                                    <span className={tabs.id === Category.id ? `relative text-white font-bold text-sm md:text-base` : `relative card-title-design font-bold text-sm md:text-base`} >{Category.name}</span>
 
                                 </button>)
                             }
@@ -71,7 +83,7 @@ const HomeFood = () => {
                                 foods.slice(0, block ).map(food => <FoodCard key={food._id} food={food}></FoodCard>)
                             }
                         </div>
-                        <div className="text-center ">
+                        <div className={`${foods.length > 6 ? "visible text-center" : "hidden "}`}>
                             <button onClick={() => setBlock(foods.length)} className={`${block == foods.length || !foods.length ? 'hidden' : 'visible'} bg-[#F01543]  py-2 md:py-3 px-3 md:px-6 lg:px-9 text-white font-bold text-xs md:text-sm  rounded`}>
                                 Show More
                             </button>
