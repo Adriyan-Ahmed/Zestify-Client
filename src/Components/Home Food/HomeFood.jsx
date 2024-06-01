@@ -78,7 +78,7 @@ const HomeFood = () => {
                                 </button>)
                             }
                         </div>
-                        <div className="grid gird-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-5">
+                        <div className="grid gird-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-5 xl:px-16 ">
                             {
                                 foods.slice(0, block ).map(food => <FoodCard key={food._id} food={food}></FoodCard>)
                             }
