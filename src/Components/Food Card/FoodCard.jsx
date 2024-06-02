@@ -38,7 +38,7 @@ const FoodCard = ({food}) => {
                         <div className="">
                             <p className="flex items-center gap-2 font-semibold"><TbBrandKbin className="text-[#F01543] text-2xl "></TbBrandKbin><span className="text-[#F01543]">Category : </span>{category}</p>
                             <Link className="" to={`/food/${_id}`}>
-                                <button className=" mt-6 flex items-center gap-3 justify-center text-[#F01543] w-full px-8 py-3 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 "><BiDetail className="text-2xl"></BiDetail> DETAILS</button>
+                                <button className=" mt-6 flex items-center gap-3 justify-center text-[#F01543] w-full px-8 py-3 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 "><BiDetail className="text-2xl"></BiDetail> Details</button>
                             </Link>
                             <button className=" mt-3 w-full flex items-center gap-3 justify-center bg-[#F01543] rounded text-white font-semibold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border hover:text-[#F01543] focus:text-[#F01543]  focus:py-3 focus:bg-transparent duration-500 "><MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart> Add to Cart</button>
                         </div>

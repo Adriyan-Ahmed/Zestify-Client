@@ -6,7 +6,9 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { IoIosCheckboxOutline } from "react-icons/io";
 import { BiCategoryAlt } from "react-icons/bi";
-import { MdOutlineDateRange } from "react-icons/md";
+import { MdOutlineDateRange, MdOutlineAddShoppingCart } from "react-icons/md";
+import { CiDeliveryTruck } from "react-icons/ci";
+
 
 const FoodDetails = () => {
 
@@ -88,7 +90,10 @@ const FoodDetails = () => {
                                     <h1>PRICE :</h1>
                                     <span>{price} <span className="text-[#F01543]">TAKA</span></span>
                                 </div>
-                                <button className=" text-[#F01543] w-full px-8 py-3.5 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 ">Add To Cart</button>
+                                <div className="space-y-3">
+                                    <button className="w-full flex items-center gap-3 justify-center bg-[#F01543] rounded text-white font-semibold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border hover:text-[#F01543] focus:text-[#F01543]  focus:py-3 focus:bg-transparent duration-500 "><CiDeliveryTruck className="text-2xl font-bold"></CiDeliveryTruck>Order Now</button>
+                                    <button className=" flex items-center gap-3 justify-center text-[#F01543] w-full px-8 py-3 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 "><MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart>Add To Cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>

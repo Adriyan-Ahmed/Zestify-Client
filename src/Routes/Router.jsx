@@ -12,6 +12,7 @@ import AddFood from "../Pages/Add Food/AddFood";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import Profile from "../Pages/Profile/Profile";
 import Protection from "../Provider/Protection";
+import Cart from "../Pages/Cart/Cart";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -57,6 +58,10 @@ const Router = createBrowserRouter([
       {
         path: "profile",
         element: <Protection><Profile></Profile></Protection>
+      },
+      {
+        path: "cart",
+        element: <Protection><Cart></Cart></Protection>
       },
       {
         path: "add-food",

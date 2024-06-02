@@ -17,9 +17,9 @@ const Dashboard = () => {
 
 
     const Links = [
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="profile" ><CgProfile className="text-2xl"></CgProfile><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>PROFILE</span></NavLink>,
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="cart" ><MdAddShoppingCart className="text-2xl"></MdAddShoppingCart><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>CART</span></NavLink>,
-        <NavLink className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="add-food" ><span className="flex items-start"><RiRestaurant2Line className="text-2xl"></RiRestaurant2Line><IoMdAdd className="text-[10px] -ml-1"></IoMdAdd></span> <span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`} >ADD FOOD</span></NavLink>
+        <NavLink onClick={() => isClose ? handleSidebarToggle() : () => {} } className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="profile" ><CgProfile className="text-2xl"></CgProfile><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>PROFILE</span></NavLink>,
+        <NavLink onClick={() => isClose ? handleSidebarToggle() : () => {} } className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="cart" ><MdAddShoppingCart className="text-2xl"></MdAddShoppingCart><span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`}>CART</span></NavLink>,
+        <NavLink onClick={() => isClose ? handleSidebarToggle() : () => {} } className={({ isActive }) => isActive ? ` bg-[#F01543] bg-opacity-10 py-2.5 px-4 text-[#F01543] font-semibold text-sm md:text-base rounded w-full ${isClose ? '' : 'flex items-center gap-2'} ` : `bg-transparent py-2.5 px-4 font-semibold text-gray-600 text-sm md:text-base  rounded w-full ${isClose ? '' : 'flex items-center gap-2'} `} to="add-food" ><span className="flex items-start"><RiRestaurant2Line className="text-2xl"></RiRestaurant2Line><IoMdAdd className="text-[10px] -ml-1"></IoMdAdd></span> <span className={` duration-700 whitespace-nowrap ${isClose ? ' scale-0 opacity-0 w-0 op pointer-events-none' : ''}`} >ADD FOOD</span></NavLink>
     ]
 
 
@@ -34,7 +34,7 @@ const Dashboard = () => {
                     <div id="body" className="min-h-screen">
 
                         {/* Side Navbar's code start from here */}
-                        <nav id="sidebar" className={`fixed top-0 left-0 h-[100%] overflow-hidden duration-700 w-[250px] bg-white space-y-14 z-10 border-r-2 ${isClose ? 'w-[73px] ' : ''}`}>
+                        <nav id="sidebar" className={`fixed top-0 left-0 h-[100%] overflow-hidden duration-700  bg-white space-y-14 z-10  ${isClose ? 'w-0 border-r-0 md:w-[73px] md:border-r-2 ' : 'w-[250px]'}`}>
                             <div className="flex items-center pl-2 pt-2">
                                 <img className=" h-14" src="https://i.ibb.co/4MjkZCX/Zestify-Logo.png" alt="LOGO" />
                                 <h1 id="linkName" className={`text-sm md:text-lg lg:text-lg xl:text-xl font-bold duration-700 ${isClose ? 'scale-0 w-0 pointer-events-none' : ''}`}>Zestify</h1>
@@ -55,11 +55,12 @@ const Dashboard = () => {
                         </nav>
                         {/* Side Navbar's code ends here */}
 
-                        <section className={`relative min-h-screen py-2.5 bg-white duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
+                        <section className={`relative min-h-screen bg-white duration-700 ${isClose ? ' w-full md:w-[calc(100%-73px)] md:left-[73px]' : 'w-full md:w-[calc(100%-250px)] md:left-[250px]'} `}>
+                            <div onClick={() => handleSidebarToggle()} className={`min-h-screen bg-black w-full bg-opacity-40 absolute md:hidden ${isClose ? 'hidden' : 'block' }`} ></div>
 
                             {/* Dashboard Top Nav's Code Start from here */}
-                            <div className={`flex items-center justify-between gap-2 z-40 fixed top-0 py-4 px-4 bg-white duration-700 ${isClose ? 'w-[calc(100%-73px)] left-[73px]' : 'w-[calc(100%-250px)] left-[250px]'} `}>
-                                <FaBars onClick={() => handleSidebarToggle()} className="text-2xl cursor-pointer hidden lg:block " id="sidebar-toggle"></FaBars>
+                            <div className={`flex items-center justify-between gap-2 z-40 fixed top-0 py-4 px-4 bg-white duration-700 ${isClose ? ' w-full md:w-[calc(100%-73px)] md:left-[73px]' : ' w-full md:w-[calc(100%-250px)] md:left-[250px]'} `}>
+                                <FaBars onClick={() => handleSidebarToggle()} className="text-2xl cursor-pointer" id="sidebar-toggle"></FaBars>
                                 <div className=" relative max-w-[600px] w-full">
                                     <div className="relative max-w-[600px] w-full ">
                                         <div className="bg-white rounded-md">
