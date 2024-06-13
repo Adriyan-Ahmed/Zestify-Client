@@ -54,8 +54,8 @@ const SpecialOffer = () => {
                             </div>
                             <div className="md:flex-[2] relative">
                                 <img className="bounce-image w-8/12 mx-auto" src="https://i.ibb.co/9gkxSp4/Coffee-cup.png" alt="" />
-                                <div className=" w-14 h-14 mx-auto rounded  border-8  absolute bg-transparent border-[#F01543] bounce-image -bottom-10 left-4 "></div>
-                                <div className=" w-14 h-14 mx-auto rounded  border-8  absolute bg-transparent border-[#F01543] bounce-image -top-10 right-4 "></div>
+                                <div className=" w-14 h-14 mx-auto rounded  border-8  absolute bg-transparent border-[#F01543] bounce-image -bottom-10 right-4 "></div>
+                                <div className=" w-14 h-14 mx-auto rounded  border-8  absolute bg-transparent border-[#F01543] bounce-image -top-10 -left-10 "></div>
                             </div>
                         </div>
                     </div>

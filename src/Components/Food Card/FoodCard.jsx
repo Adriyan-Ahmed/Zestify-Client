@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BiDetail } from "react-icons/bi";
 
-
 const FoodCard = ({food}) => {
 
 

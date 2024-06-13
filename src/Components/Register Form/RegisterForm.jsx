@@ -110,8 +110,6 @@ const RegisterForm = () => {
 
                     })
 
-                    saveUserInfo(res.user.displayName, res.user.photoURL, res.user.email)
-
                     navigate();
 
                 }
