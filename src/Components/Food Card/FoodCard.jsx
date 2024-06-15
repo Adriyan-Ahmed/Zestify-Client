@@ -4,11 +4,68 @@ import { MdOutlineBloodtype } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BiDetail } from "react-icons/bi";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexts/Authentication/Authentication";
+import axios from "axios";
+import Swal from "sweetalert2";
+
 
 const FoodCard = ({food}) => {
 
 
     const {_id, category, name, image, price,} = food;
+
+
+    const { User } = useContext(AuthContext);
+
+
+    const handleAddToCart = () => {
+
+        if(User?.email){
+
+            const email = User?.email;
+            const userName = User?.displayName;
+            const userImage = User?.photoURL;
+
+            const Product = {
+                category,
+                name,
+                image,
+                price,
+                userName,
+                email,
+                userImage
+            };
+
+            axios.post(`http://localhost:5000/api/v1/cart`, Product)
+            .then(res => {
+                
+                if(res.data.acknowledged) {
+
+                    Swal.fire({
+                        title: "Hurrey !  ",
+                        text: "1 new item have been added to your cart",
+                        icon: "success"
+                    });
+                    
+                }
+                
+            })
+        
+        } else {
+
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "You have to register an account",
+                footer: ''
+            });
+
+        }
+
+    }
+
+
     return (
         <>
             <div data-aos="fade-up"
@@ -39,7 +96,7 @@ const FoodCard = ({food}) => {
                             <Link className="" to={`/food/${_id}`}>
                                 <button className=" mt-6 flex items-center gap-3 justify-center text-[#F01543] w-full px-8 py-3 text-sm md:text-base lg:text-lg font-semibold border rounded btn-1 hover:text-white border-[#F01543] duration-1000 "><BiDetail className="text-2xl"></BiDetail> Details</button>
                             </Link>
-                            <button className=" mt-3 w-full flex items-center gap-3 justify-center bg-[#F01543] rounded text-white font-semibold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border hover:text-[#F01543] focus:text-[#F01543]  focus:py-3 focus:bg-transparent duration-500 "><MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart> Add to Cart</button>
+                            <button onClick={handleAddToCart} className=" mt-3 w-full flex items-center gap-3 justify-center bg-[#F01543] rounded text-white font-semibold py-3 text-sm md:text-base lg:text-lg hover:bg-transparent border-[#F01543] border hover:text-[#F01543] focus:text-[#F01543]  focus:py-3 focus:bg-transparent duration-500 "><MdOutlineAddShoppingCart className="text-2xl"></MdOutlineAddShoppingCart> Add to Cart</button>
                         </div>
                     </div>
                 </div>
